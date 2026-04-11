@@ -30,6 +30,7 @@ export default function Education() {
           <div className="edu-line-seg"></div>
           <div className="edu-dot"></div>
           <div className="edu-line-seg"></div>
+          <div className="edu-line-seg"></div>
           <div className="edu-dot"></div>
           <div className="edu-line-seg"></div>
           <div className="edu-dot"></div>

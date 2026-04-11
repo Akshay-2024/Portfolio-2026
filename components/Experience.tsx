@@ -10,7 +10,9 @@ export default function Experience() {
       <div className="exp-grid">
 
         <div className="exp-card">
-          <div className="exp-logo">★</div>
+          <div className="exp-logo">
+            <img src="/icons/nss.png" alt="NSS" />
+          </div>
           <div className="exp-role">Creative Team Lead</div>
           <h3>Creative Leadership</h3>
           <p>
@@ -19,7 +21,9 @@ export default function Experience() {
         </div>
 
         <div className="exp-card">
-          <div className="exp-logo">⚙</div>
+          <div className="exp-logo">
+            <img src="/icons/legecy.jpg" alt="Legacy Iedc" />
+          </div>
           <div className="exp-role">Technical Lead</div>
           <h3>Technical Direction</h3>
           <p>
@@ -28,7 +32,9 @@ export default function Experience() {
         </div>
 
         <div className="exp-card">
-          <div className="exp-logo">◆</div>
+          <div className="exp-logo">
+            <img src="/icons/Kerala.png" alt="Kerala Tourism Club" />
+          </div>
           <div className="exp-role">Member</div>
           <h3>Kerala Tourism Club</h3>
           <p>

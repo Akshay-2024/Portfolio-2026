@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
+import './globals.css'
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans&family=Space+Mono&display=swap" rel="stylesheet" />
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +26,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    ><link rel="preconnect" href="https://fonts.googleapis.com" />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

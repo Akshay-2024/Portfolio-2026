@@ -1,12 +1,17 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="hero" id="intro">
+
+      {/* SCROLL INDICATOR */}
       <div style={{ position: "absolute", top: "120px", right: 0 }}>
-       <div className="scroll-indicator">
-        <div className="scroll-dot"></div>
-       </div>
+        <div className="scroll-indicator">
+          <div className="scroll-dot"></div>
+        </div>
       </div>
 
+      {/* LEFT TEXT */}
       <div className="hero-text">
         <p className="hero-eyebrow">I am</p>
 
@@ -21,13 +26,8 @@ export default function Hero() {
           technology and digital design. I have a keen aptitude for graphic
           designing, programming, and web design.
         </p>
-<br />
-        {/* <div className="hero-socials">
-          <a href="#instagram" className="social-btn">in</a>
-          <a href="#twitter" className="social-btn">ig</a>
-          <a href="#facebook" className="social-btn">fb</a>
-          <a href="#github" className="social-btn">gh</a>
-        </div> */}
+
+        <br />
 
         <div className="cta-row">
           <button className="btn-primary">Download Resume</button>
@@ -35,15 +35,19 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* RIGHT IMAGE */}
       <div className="hero-image">
-        <div>
-          <div className="hero-photo-frame">
-           <div className="hero-photo-placeholder">
-  <div className="photo-initials"></div>
-</div>
-          </div>
+        <div className="hero-photo-frame">
+          <Image
+            src="/profile.jpg"
+            alt="Akshay"
+            width={400}
+            height={500}
+            className="hero-photo"
+          />
         </div>
       </div>
+
     </section>
-  )
+  );
 }
