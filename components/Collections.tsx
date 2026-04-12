@@ -15,7 +15,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🏆</div>
           <div className="collection-info">
             <h3>Certificates</h3>
-            <span>6 achievements</span>
+            <span>3 achievements</span>
           </div>
         </Link>
 
@@ -31,7 +31,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🎬</div>
           <div className="collection-info">
             <h3>Videos</h3>
-            <span>8 films</span>
+            <span>0 films</span>
           </div>
         </Link>
 
@@ -39,7 +39,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🎨</div>
           <div className="collection-info">
             <h3>Posters</h3>
-            <span>9 designs</span>
+            <span>0 designs</span>
           </div>
         </Link>
 
