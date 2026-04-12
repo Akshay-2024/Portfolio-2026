@@ -31,7 +31,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🎬</div>
           <div className="collection-info">
             <h3>Videos</h3>
-            <span>0 films</span>
+            <span>10 films</span>
           </div>
         </Link>
 
@@ -39,7 +39,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🎨</div>
           <div className="collection-info">
             <h3>Posters</h3>
-            <span>0 designs</span>
+            <span>9 designs</span>
           </div>
         </Link>
 

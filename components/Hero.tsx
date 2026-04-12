@@ -1,5 +1,7 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import { FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 export default function Hero() {
   return (
     <section className="hero" id="intro">
@@ -30,8 +32,26 @@ export default function Hero() {
         <br />
 
         <div className="cta-row">
-          <button className="btn-primary">Download Resume</button>
-          <button className="btn-outline">Contact Me</button>
+          <a href="/resume.pdf" download><button className="btn-primary">Download Resume</button></a>
+          <Link href="#contact"><button className="btn-outline">Contact Me</button></Link>
+        </div>
+        <br/>
+        <div className="contactSocials">
+          <a href="https://www.instagram.com/ak.s.ay/?__pwa=1" className="socialItem" target="_blank" rel="noopener noreferrer">
+                        <FaInstagram />
+                      </a>
+                      <a href="https://www.linkedin.com/in/akshay-s-992aa431b" className="socialItem" target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin />
+                      </a>
+                      <a href="https://github.com/Akshay-2024" className="socialItem" target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                      </a>
+                       <a href="https://www.facebook.com/akshay.kulathinkara.7/" className="socialItem" target="_blank" rel="noopener noreferrer">
+                        <FaFacebook />
+                      </a>
+                      <a href="https://x.com/_Akshay_s__" className="socialItem" target="_blank" rel="noopener noreferrer">
+                        <FaTwitter />
+                      </a>
         </div>
       </div>
 
