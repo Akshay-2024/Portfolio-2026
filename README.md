@@ -43,31 +43,10 @@ components/
 public/
 styles/
   globals.css
-```
 
----
-
-## 🚀 Getting Started
-
-Clone the repository:
 
 ```
-git clone https://github.com/Akshay-2024/Portfolio-2026.git
-```
 
-Install dependencies:
-
-```
-npm install
-```
-
-Run development server:
-
-```
-npm run dev
-```
-
----
 
 ## 📸 Screenshots
 
