@@ -10,44 +10,111 @@ export default function VideosPage() {
       <div className="video-grid">
 
         {/* Vertical Video */}
-        <div className="video-card tall">
-          <video src="/videos/v1.mp4" controls />
+       <div className="video-card tall">
+          <iframe
+        src="https://www.youtube.com/embed/SyM1EcUYJoA"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
 
         <div className="video-card tall">
-          <video src="/videos/v2.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/j0HEm5F_bMs" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
 
         <div className="video-card tall">
-          <video src="/videos/v3.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/8tbALWAHJjE"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
+
         <div className="video-card tall">
-          <video src="/videos/v4.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/FalzDaE1MpQ"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
+
+        
         <div className="video-card tall">
-          <video src="/videos/v5.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/fLbi7GLsT4Q" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
-        <div className="video-card tall">
-          <video src="/videos/v6.mp4" controls />
+
+       <div className="video-card tall">
+          <iframe
+        src="https://www.youtube.com/embed/4wvp9zoHonA" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
+       
         <div className="video-card tall">
-          <video src="/videos/v7.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/g3SuL6ravmA" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
 
          {/* Vertical */}
         <div className="video-card tall">
-          <video src="/videos/v10.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/IrV78WuoffA" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
 
         {/* Horizontal */}
         <div className="video-card wide">
-          <video src="/videos/v8.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/JcyWqeGmXxo"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        ></iframe>
         </div>
 
         <div className="video-card wide">
-          <video src="/videos/v9.mp4" controls />
+          <iframe
+        src="https://www.youtube.com/embed/lEhZN-zqXLo" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        
+        ></iframe>
         </div>
         
+      
         
       </div>
     </section>

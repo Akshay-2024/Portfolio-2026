@@ -955,6 +955,14 @@ font-size: clamp(43px, 7.8vw, 93px);
   object-fit: cover;
 }
 
+.video-card iframe {
+  width: 100%;
+  height: 100%;       /* fill parent */
+  border: none;
+}
+
+
+
 /* Hover effect */
 .video-card:hover video {
   transform: scale(1.03);
