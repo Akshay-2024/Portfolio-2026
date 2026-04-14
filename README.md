@@ -6,7 +6,7 @@ A modern personal portfolio built using **Next.js**, showcasing my work, skills,
 
 ## 🌐 Live Demo
 
-👉 (https://portfolio-2026-two-neon.vercel.app/)
+👉 (https://www.akshays.me)
 
 ---
 
