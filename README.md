@@ -46,12 +46,6 @@ styles/
 
 
 ```
-
-
-## 📸 Screenshots
-
-NOT COMPLETED
-
 ---
 
 ## 🙌 Author
