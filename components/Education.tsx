@@ -21,7 +21,7 @@ export default function Education() {
 
         <div className="edu-card edu-left">
           <div className="edu-level">2022</div>
-          <h3>Govt. HSS Thanakkal</h3>
+          <h3>Govt. HSS Thonakkal</h3>
           <p>Higher Secondary</p>
         </div>
 

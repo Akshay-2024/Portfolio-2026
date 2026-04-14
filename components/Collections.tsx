@@ -15,7 +15,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🏆</div>
           <div className="collection-info">
             <h3>Certificates</h3>
-            <span>17 achievements</span>
+            <span>28 achievements</span>
           </div>
         </Link>
 
