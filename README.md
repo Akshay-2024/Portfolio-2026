@@ -34,13 +34,38 @@ A modern personal portfolio built using **Next.js**, showcasing my work, skills,
 
 ```
 app/
+  /api
+    /contact
+      route.ts
+  /certificates
+    page.tsx
+  /photos
+    page.ts
+  /posters
+    page.tsx
+  /videos
+    page.tsx
   page.tsx
 components/
+  collections.tsx
+  experience.tsx
+  contacts.tsx
+  projects.tsx
   Navbar.tsx
   Hero.tsx
   Skills.tsx
   Education.tsx
+data/
+  certificate.js
 public/
+  certificates/
+    'images'
+  icons/
+    'images'
+  posters/
+    'images'
+  photos/
+    'images'
 styles/
   globals.css
 
