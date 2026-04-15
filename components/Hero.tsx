@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+
 export default function Hero() {
   return (
     <section className="hero" id="intro">
@@ -33,6 +33,7 @@ export default function Hero() {
 
         <div className="cta-row">
           <a href="/resume.pdf" download><button className="btn-primary">Download Resume</button></a>
+          &nbsp;&nbsp;
           <Link href="#contact"><button className="btn-outline">Contact Me</button></Link>
         </div>
         <br/>

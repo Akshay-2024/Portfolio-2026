@@ -1,6 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { certificates } from "@/data/certificate";
 
 export default function Collections() {
+  const certCount = certificates.length;
+
   return (
     <section className="section" id="collections">
       <p className="section-label">Gallery</p>
@@ -15,7 +18,7 @@ export default function Collections() {
           <div className="collection-img-placeholder">🏆</div>
           <div className="collection-info">
             <h3>Certificates</h3>
-            <span>28 achievements</span>
+            <span>{certCount} achievements</span> {/* ✅ dynamic */}
           </div>
         </Link>
 
@@ -45,5 +48,5 @@ export default function Collections() {
 
       </div>
     </section>
-  )
+  );
 }
