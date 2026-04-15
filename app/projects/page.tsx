@@ -49,6 +49,18 @@ export default function ProjectsPage() {
           </div>
         </div>
 
+        <div className="project-card">
+          <div className="project-tag">Education</div>
+          <h3>Virtual Physics Lab</h3>
+          <p>
+            The Virtual Physics Lab is a modern educational web application designed to simplify complex physics concepts through visual learning, videos, and real-time simulations. The platform focuses on making physics intuitive, engaging, and accessible for students of all levels by combining theory with interactive experiences.  
+            </p>
+          <div className="project-links">
+            
+            <a href="https://github.com/Akshay-2024/Virtual-Physics-Lab">GitHub</a>
+          </div>
+        </div>
+
       </div>
     </section>
   )
