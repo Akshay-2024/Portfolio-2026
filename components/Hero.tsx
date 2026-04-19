@@ -32,7 +32,7 @@ export default function Hero() {
         <br />
 
         <div className="cta-row">
-          <a href="/resume.pdf" download><button className="btn-primary">Download Resume</button></a>
+          <a href="/Akshay S resume.pdf" download><button className="btn-primary">Download Resume</button></a>
           &nbsp;&nbsp;
           <Link href="#contact"><button className="btn-outline">Contact Me</button></Link>
         </div>

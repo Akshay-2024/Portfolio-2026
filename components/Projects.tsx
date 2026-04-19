@@ -1,6 +1,27 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Projects() {
+  const projects = [
+    {
+      title: "Coastal Connect",
+      tag: "Coastal Culture",
+      desc: "AI-powered platform connecting travelers with Kerala’s coastal culture through immersive local experiences and sustainable tourism.",
+      tech: ["Next.js", "AI", "Node.js", "Tailwind"],
+    },
+    {
+      title: "Care Console Pro",
+      tag: "Healthcare AI",
+      desc: "Secure cloud-based system for storing and managing personal medical records with seamless cross-device access.",
+      tech: ["HTML", "CSS", "MySQL","Django"],
+    },
+    {
+      title: "Dental AI",
+      tag: "Healthcare AI",
+      desc: "End-to-end dental platform integrating AI for diagnosis and consultation with a strong focus on usability.",
+      tech: ["AI", "React", "Python","Tailwind", "Shadcn UI"],
+    },
+  ];
+
   return (
     <section className="section projects-section" id="projects">
       <p className="section-label">Work</p>
@@ -10,41 +31,36 @@ export default function Projects() {
       </h2>
 
       <div className="projects-grid">
+        {projects.map((project, i) => (
+          <div key={i} className="project-card">
 
-        <div className="project-card">
-          <div className="project-tag">Web</div>
-          <h3>Coastal Connect</h3>
-          <p>
-           Coastal Connect is an AI-powered platform that connects travelers with Kerala’s authentic coastal culture. It offers immersive experiences like fishing village tours, homestays, and cultural storytelling while empowering local communities. By blending technology with tradition, it promotes sustainable tourism and preserves the rich heritage of coastal life for future generations.
+            <div className="project-header">
+              <span className="project-tag">{project.tag}</span>
+              <div className="project-dot"></div>
+            </div>
 
-          </p>
-        </div>
+            <h3>{project.title}</h3>
 
-        <div className="project-card">
-          <div className="project-tag">Healthcare AI</div>
-          <h3>Care Console Pro</h3>
-          <p>
-            Care console pro is a storage based platform, which provide a secure, user-friendly platform for managing personal medical records. The system leverages cloud technology to provide users with the ability to upload, store, access, and share their medical data from any device, ensuring a seamless experience that prioritizes data security and privacy.
-          </p>
-        </div>
-        
-        <div className="project-card">
-          <div className="project-tag">Healthcare AI</div>
-          <h3>Dental AI</h3>
-          <p>
-           
-          A complete application for dentist to consultation to analysis. Here we introduce many AI features on this website. This is an user friendly website which makes dentist to handle easily. Putting patients first with technology that enhances the human touch.
-          </p>
-        </div>
+            <p>{project.desc}</p>
 
+            {/* ✅ Tech Stack */}
+            <div className="tech-stack">
+              {project.tech.map((tech, idx) => (
+                <span key={idx} className="tech-badge">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+          </div>
+        ))}
       </div>
 
-      {/* 👇 ADD THIS */}
       <div className="projects-cta">
         <Link href="/projects">
           <button className="btn-outline">View More</button>
         </Link>
       </div>
     </section>
-  )
+  );
 }
