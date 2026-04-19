@@ -112,7 +112,7 @@ export default function Contact() {
           <a href="https://x.com/_Akshay_s__" className="socialItem" target="_blank" rel="noopener noreferrer">
             <FaTwitter />
           </a>
-          <a href="mailto:akshaysingh2024@gmail.com" className="socialItem">
+          <a href="mailto:akshay20119@gmail.com" className="socialItem">
             <MdEmail />
           </a>
         </div>
