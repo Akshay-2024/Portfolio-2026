@@ -109,6 +109,7 @@ useEffect(() => {
           "Course",
           "Event",
           "Volunteering",
+          
         ].map((cat) => (
           <div
             key={cat}

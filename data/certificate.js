@@ -1,4 +1,11 @@
 export const certificates = [
+   {
+    title: "Attended online webinar on zero to hero in 6 months",
+    issuer: "Offenso Hackers Acadamy ",
+    year: 2026,
+    category: "Workshop",
+    image: "/Certificates/zero to hero.jpg",
+  },
   {
     title: "Participation in IEDC Startup Summit 2026",
     issuer: "Kerala Startup Mission ",
