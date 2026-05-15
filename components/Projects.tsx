@@ -3,6 +3,12 @@ import Link from "next/link";
 export default function Projects() {
   const projects = [
     {
+      title: "AmoraWeds",
+      tag: "Our new business idea",
+      desc: " A modern luxury wedding invitation website built using Next.js, React, and immersive UI animations. Designed for premium digital wedding experiences with elegant visuals, smooth interactions, and responsive layouts.",
+      tech: ["Next.js","React","Framer Motion","Node.js","Tailwind"],
+    },
+    {
       title: "Coastal Connect",
       tag: "Coastal Culture",
       desc: "AI-powered platform connecting travelers with Kerala’s coastal culture through immersive local experiences and sustainable tourism.",
@@ -14,12 +20,7 @@ export default function Projects() {
       desc: "Secure cloud-based system for storing and managing personal medical records with seamless cross-device access.",
       tech: ["HTML", "CSS", "MySQL","Django"],
     },
-    {
-      title: "Dental AI",
-      tag: "Healthcare AI",
-      desc: "End-to-end dental platform integrating AI for diagnosis and consultation with a strong focus on usability.",
-      tech: ["AI", "React", "Python","Tailwind", "Shadcn UI"],
-    },
+    
   ];
 
   return (

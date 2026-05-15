@@ -60,7 +60,7 @@ export default function Hero() {
       <div className="hero-image">
         <div className="hero-photo-frame">
           <Image
-            src="/profile.jpg"
+            src="/profile1.jpeg"
             alt="Akshay"
             width={400}
             height={500}

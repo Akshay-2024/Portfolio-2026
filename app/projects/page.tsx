@@ -3,6 +3,14 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
+      title: "AmoraWeds",
+      tag: "Our new business idea",
+      desc: " A modern luxury wedding invitation website built using Next.js, React, and immersive UI animations. Designed for premium digital wedding experiences with elegant visuals, smooth interactions, and responsive layouts. Amora Weds focuses on creating cinematic and luxury digital wedding invitations for premium & budget friendly clients using modern web technologies.",
+      tech: ["Next.js","React","Framer Motion","Node.js","Tailwind"],
+      live: "https://amora-weds.vercel.app/",
+      github: "https://github.com/Akshay-2024/AmoraWeds.git",
+    },
+    {
       title: "Coastal Connect",
       tag: "Coastal Culture",
       desc: "            Coastal Connect is an AI-powered platform that connects travelers with Kerala’s authentic coastal culture. It offers immersive experiences like fishing village tours, homestays, and cultural storytelling while empowering local communities. By blending technology with tradition, it promotes sustainable tourism and preserves the rich heritage of coastal life for future generations.",
