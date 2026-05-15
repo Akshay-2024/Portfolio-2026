@@ -13,7 +13,7 @@ export default function Collections() {
     },
     {
       title: "Photos",
-      count: "12 captures",
+      count: "21 captures",
       icon: "📷",
       href: "/photos",
     },

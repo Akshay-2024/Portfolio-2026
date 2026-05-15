@@ -10,6 +10,10 @@ export default function PhotosPage() {
       <div className="photo-grid">
 
         <div className="photo-card">
+          <img src="/photos/p0.jpg" alt="photo0" />
+        </div>
+
+        <div className="photo-card">
           <img src="/photos/p1.jpeg" alt="photo1" />
         </div>
 
@@ -55,6 +59,38 @@ export default function PhotosPage() {
 
         <div className="photo-card">
           <img src="/photos/p12.jpeg" alt="photo12" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p13.png" alt="photo13" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p14.jpg" alt="photo14" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p15.jpg" alt="photo15" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p16.jpg" alt="photo16" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p17.jpg" alt="photo17" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p18.png" alt="photo18" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p19.png" alt="photo19" />
+        </div>
+
+        <div className="photo-card">
+          <img src="/photos/p21.jpg" alt="photo21" />
         </div>
 
       </div>
