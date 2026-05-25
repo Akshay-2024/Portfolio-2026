@@ -4,7 +4,7 @@ export default function ProjectsPage() {
   const projects = [
     {
       title: "AmoraWeds",
-      tag: "Our new business idea",
+      tag: "My new business idea",
       desc: " A modern luxury wedding invitation website built using Next.js, React, and immersive UI animations. Designed for premium digital wedding experiences with elegant visuals, smooth interactions, and responsive layouts. Amora Weds focuses on creating cinematic and luxury digital wedding invitations for premium & budget friendly clients using modern web technologies.",
       tech: ["Next.js","React","Framer Motion","Node.js","Tailwind"],
       live: "https://amora-weds.vercel.app/",
