@@ -38,7 +38,7 @@ export default function LoaderVideo({
         onEnded={handleFinish}
       >
         <source
-          src="/videos/loader sign.mp4"
+          src="/videos/loadersign.mp4"
           type="video/mp4"
         />
       </video>
