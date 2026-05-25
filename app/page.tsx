@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 
 import LoaderVideo from "@/components/LoaderVideo";
 import Navbar from "@/components/navbar";
@@ -12,27 +12,29 @@ import Collections from "@/components/Collections";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
-function useHasVisited() {
-  return useSyncExternalStore(
-    () => () => {},
-    () => {
-      if (typeof window === "undefined") return false;
-      return sessionStorage.getItem("portfolio-loaded") === "true";
-    },
-    () => false
-  );
-}
-
 export default function Home() {
-  const hasVisited = useHasVisited();
+  const [showLoader, setShowLoader] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+
+    const visited = sessionStorage.getItem("portfolio-loaded");
+
+    if (!visited) {
+      setShowLoader(true);
+    }
+  }, []);
 
   const handleLoaderFinish = () => {
     sessionStorage.setItem("portfolio-loaded", "true");
-    window.location.reload();
+    setShowLoader(false);
   };
 
-  // Show loader only first time
-  if (!hasVisited) {
+  // Prevent hydration mismatch
+  if (!mounted) return null;
+
+  if (showLoader) {
     return <LoaderVideo onFinish={handleLoaderFinish} />;
   }
 
