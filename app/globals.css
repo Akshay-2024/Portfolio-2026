@@ -377,8 +377,8 @@ font-size: clamp(43px, 7.8vw, 93px);
   }
 
   .hero-image {
-    order: -1;               /* image moves above text */
-    justify-content: center;
+    order: -1;
+    justify-content: flex-start; /* image aligns left too */
   }
 
   .hero-photo {
@@ -386,27 +386,12 @@ font-size: clamp(43px, 7.8vw, 93px);
     height: 280px;
   }
 
-  .hero-text {
-    text-align: center;
-  }
+  /* removed: text-align: center */
+  /* removed: hero-eyebrow justify-content: center */
+  /* removed: hero-bio margin-inline: auto */
+  /* removed: cta-row justify-content: center */
+  /* removed: contactSocials justify-content: center */
 
-  .hero-eyebrow {
-    justify-content: center;
-  }
-
-  .hero-bio {
-    margin-inline: auto;
-  }
-
-  .cta-row {
-    justify-content: center;
-  }
-
-  .contactSocials {
-    justify-content: center;
-  }
-
-  /* diagonal stripe looks odd on single column — soften it */
   .hero::after {
     width: 100%;
     right: 0;
@@ -422,7 +407,6 @@ font-size: clamp(43px, 7.8vw, 93px);
   }
 }
 
-/* Mobile */
 @media (max-width: 560px) {
   .hero {
     padding: 90px 24px 48px;
