@@ -346,6 +346,105 @@ font-size: clamp(43px, 7.8vw, 93px);
   max-width: 460px;
 }
 
+/* ── HERO RESPONSIVE ─────────────────────────────────── */
+
+/* Scroll indicator — position relative to section, not fixed coords */
+.scroll-indicator-wrap {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  z-index: 3;
+}
+
+/* CTA row — use gap instead of &nbsp; */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+/* Tablet — stack image below text */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 100px 40px 60px;
+    gap: 48px;
+    min-height: unset;
+  }
+
+  .hero-image {
+    order: -1;               /* image moves above text */
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 220px;
+    height: 280px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-bio {
+    margin-inline: auto;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .contactSocials {
+    justify-content: center;
+  }
+
+  /* diagonal stripe looks odd on single column — soften it */
+  .hero::after {
+    width: 100%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transform: none;
+    border-left: none;
+    border-top: 1px solid rgba(212,168,67,0.08);
+  }
+
+  .scroll-indicator-wrap {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .hero {
+    padding: 90px 24px 48px;
+    gap: 32px;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 230px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-row a,
+  .cta-row button {
+    width: 100%;
+  }
+}
+
 /* ── BUTTONS ─────────────────────────────────────────── */
 .btn-primary {
   display: inline-block;
