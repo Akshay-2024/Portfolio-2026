@@ -1,4 +1,11 @@
 export const certificates = [
+  {
+    title: "General Networking - Networking and Security Course",
+    issuer: "Infosis Springboard ",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/General Networking.jpg",
+  },
    {
     title: "Attended online webinar on zero to hero in 6 months",
     issuer: "Offenso Hackers Acadamy ",
@@ -15,10 +22,10 @@ export const certificates = [
   },
   {
     title: "Complete UNIX & Linux OS Fundamentals Training",
-    issuer: "Infosys ",
+    issuer: "Infosys Springboard ",
     year: 2026,
     category: "Course",
-    image: "/Certificates/UNIX & Linux.jpg",
+    image: "/Certificates/unix-linux.jpg",
   },
   {
     title: "Participated IEDC District Cluster level Hackathon",
@@ -39,7 +46,7 @@ export const certificates = [
     issuer: "IEEE IA/IE/PELS Jt. Chapter, Kerala ",
     year: 2025,
     category: "Hackathon",
-    image: "/Certificates/Participation of Hackathon @IHRD Attingal.jpg",
+    image: "/Certificates/participation-hackathon-ihrd-attingal.jpg",
   },
   {
     title: "Participated 20 Hour Hackathon organized by ISTE TKMCE",

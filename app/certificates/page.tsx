@@ -5,7 +5,6 @@ import { certificates } from "@/data/certificate"; // ✅ fixed
 
 
 
-
 type Certificate = {
   title: string;
   issuer: string;
@@ -19,9 +18,11 @@ export default function CertificatesPage() {
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [yearOpen, setYearOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
-  
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-/* 👇 ADD HERE */
+ 
+
 useEffect(() => {
   const handleClickOutside = () => {
     setYearOpen(false);
@@ -42,6 +43,62 @@ useEffect(() => {
   const uniqueYears = Array.from(
   new Set(certificates.map((c: Certificate) => c.year))
 ) as number[];
+
+  const openLightbox = (index: number) => {
+  setSelectedIndex(index);
+  setIsOpen(true);
+};
+
+const closeLightbox = () => {
+  setIsOpen(false);
+
+  setTimeout(() => {
+    setSelectedIndex(null);
+  }, 200);
+};
+
+const showNext = (e?: React.MouseEvent) => {
+  e?.stopPropagation();
+
+  if (selectedIndex === null) return;
+
+  setSelectedIndex(
+    (selectedIndex + 1) % filteredCertificates.length
+  );
+};
+
+const showPrev = (e?: React.MouseEvent) => {
+  e?.stopPropagation();
+
+  if (selectedIndex === null) return;
+
+  setSelectedIndex(
+    (selectedIndex - 1 + filteredCertificates.length) %
+      filteredCertificates.length
+  );
+};
+ useEffect(() => {
+  if (!isOpen) return;
+
+  const handleKey = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+
+    if (e.key === "ArrowRight") {
+      showNext();
+    }
+
+    if (e.key === "ArrowLeft") {
+      showPrev();
+    }
+  };
+
+  window.addEventListener("keydown", handleKey);
+
+  return () =>
+    window.removeEventListener("keydown", handleKey);
+}, [isOpen, selectedIndex]);
 
   return (
     <section className="section">
@@ -128,24 +185,79 @@ useEffect(() => {
 </div>
 
       {/* 🔥 Grid */}
-      <div className="cert-grid">
-        {filteredCertificates.map((cert: Certificate, index: number) => (
-          <div className="cert-card" key={index}>
-            <Image
-              src={cert.image}
-              alt={cert.title}
-              width={400}
-              height={250}
-              sizes="(max-width: 768px) 100vw, 400px"
-              className="cert-img"
-            />
-            <div className="cert-content">
-              <h3>{cert.title}</h3>
-              <p>{cert.issuer} · {cert.year}</p>
-            </div>
-          </div>
-        ))}
+ <div className="cert-grid">
+  {filteredCertificates.map((cert: Certificate, index: number) => (
+    <div
+      className="cert-card"
+      key={index}
+      onClick={() => openLightbox(index)}
+    >
+      <Image
+        src={cert.image}
+        alt={cert.title}
+        width={400}
+        height={250}
+        className="cert-img"
+        style={{ width: "100%", height: "auto" }}
+      />
+
+      <div className="cert-content">
+        <h3>{cert.title}</h3>
+        <p>
+          {cert.issuer} · {cert.year}
+        </p>
       </div>
+    </div>
+  ))}
+</div>
+      {selectedIndex !== null && (
+  <div
+    className={`lightbox ${isOpen ? "show" : ""}`}
+    onClick={closeLightbox}
+  >
+    <button
+      className="close-btn"
+      onClick={(e) => {
+        e.stopPropagation();
+        closeLightbox();
+      }}
+    >
+      ✕
+    </button>
+
+    
+
+ <div
+  className="lightbox-content"
+  onClick={(e) => e.stopPropagation()}
+>
+  <button
+    className="nav-btn left"
+    onClick={showPrev}
+  >
+    ❮
+  </button>
+
+  <Image
+    src={filteredCertificates[selectedIndex].image}
+    alt={filteredCertificates[selectedIndex].title}
+    width={1200}
+    height={800}
+    className="lightbox-img"
+    style={{ width: "100%", height: "auto" }}
+  />
+
+  <button
+    className="nav-btn right"
+    onClick={showNext}
+  >
+    ❯
+  </button>
+</div>
+
+  </div>
+  )}
+    
     </section>
   );
 }
