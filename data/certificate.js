@@ -1,5 +1,12 @@
 export const certificates = [
   {
+    title: "It NetworkingFundamentals for Complete Beginners",
+    issuer: "Udemy",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/It-Networking-Fundamentals.jpg",
+  },
+  {
     title: "General Networking - Networking and Security Course",
     issuer: "Infosis Springboard ",
     year: 2026,
