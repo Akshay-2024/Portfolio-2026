@@ -1,5 +1,12 @@
 export const certificates = [
   {
+    title: "CompTIA Network+: Network Types",
+    issuer: "Infosis Springboard",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/CompTIA.jpg",
+  },
+  {
     title: "It NetworkingFundamentals for Complete Beginners",
     issuer: "Udemy",
     year: 2026,
