@@ -1,5 +1,12 @@
 export const certificates = [
   {
+    title: "CompTIA Network+: Well-known Ports & Protocols",
+    issuer: "Infosis Springboard",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/CompTIA2.jpg",
+  },
+  {
     title: "CompTIA Network+: Network Types",
     issuer: "Infosis Springboard",
     year: 2026,
