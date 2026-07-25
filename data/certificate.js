@@ -1,5 +1,33 @@
 export const certificates = [
-  
+
+  {
+    title: "Personal Branding for Career Succes",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/Personal-Branding.jpg",
+  },
+  {
+    title: "Fundamentals of the Prompt Engineering",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/Prompt-Engineering.jpg",
+  },
+  {
+    title: "Professional Resume & Portfolio Development",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/Resume-Portfolio Development.jpg",
+  },
+   {
+    title: "CompTIA Network+: Well-known Ports & Protocols",
+    issuer: "Infosis Springboard",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/CompTIA2.jpg",
+  },
   {
     title: "CompTIA Network+: Network Types",
     issuer: "Infosis Springboard",
