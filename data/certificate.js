@@ -1,5 +1,11 @@
 export const certificates = [
-
+  {
+    title: "CompTIA PenTest+: Reconnaissance & Enumeration",
+    issuer: "Infosis Springboard",
+    year: 2026,
+    category: "Course",
+    image: "/Certificates/Reconnaissance-Enumeration.jpg",
+  },
   {
     title: "Personal Branding for Career Succes",
     issuer: "Kerala Startup Mission",
