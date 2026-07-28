@@ -7,6 +7,13 @@ export const certificates = [
     image: "/Certificates/Reconnaissance-Enumeration.jpg",
   },
   {
+    title: "Creating Comics: From Ideas to Pages",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/Creating-Comics-From-Ideas-to-Pages.jpg",
+  },
+  {
     title: "Personal Branding for Career Succes",
     issuer: "Kerala Startup Mission",
     year: 2026,
