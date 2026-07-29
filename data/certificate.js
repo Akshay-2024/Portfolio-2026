@@ -6,6 +6,13 @@ export const certificates = [
     category: "Course",
     image: "/Certificates/Reconnaissance-Enumeration.jpg",
   },
+   {
+    title: "Figma Essentials For Modern Design",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/Figma.jpg",
+  },
   {
     title: "Creating Comics: From Ideas to Pages",
     issuer: "Kerala Startup Mission",

@@ -198,7 +198,7 @@ const showPrev = (e?: React.MouseEvent) => {
         width={400}
         height={250}
         className="cert-img"
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "200px" }}
       />
 
       <div className="cert-content">
