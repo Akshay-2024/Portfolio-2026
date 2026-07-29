@@ -108,7 +108,7 @@ export default function TechStack() {
               </div>
               <div className="ts-item">
                 <img
-                  src="/icons/Lightroom.svg"
+                  src="/icons/lightroom.svg"
                   alt="Lightroom"
                 />
                 <span>Lightroom</span>
