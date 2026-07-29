@@ -589,7 +589,7 @@ font-size: clamp(43px, 7.8vw, 93px);
 .edu-card::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 40px;
   width: 14px;
   height: 14px;
   background: var(--gold);
@@ -640,7 +640,7 @@ font-size: clamp(43px, 7.8vw, 93px);
   }
 
   .edu-card {
-    width: 100%;
+    width:calc(100% - 28px);
     margin-left: 30px !important;
     text-align: left;
   }

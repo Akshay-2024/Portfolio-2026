@@ -6,6 +6,7 @@ import LoaderVideo from "@/components/LoaderVideo";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
+import TechStack from "@/components/TechStack";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Collections from "@/components/Collections";
@@ -43,6 +44,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Skills />
+      <TechStack />
       <Education />
       <Experience />
       <Collections />
