@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-text">
-        <p className="hero-eyebrow">I am</p>
+        <p className="hero-eyebrow">Hi, I am</p>
 
         <h1 className="hero-name">
           AKSHAY<br />S
