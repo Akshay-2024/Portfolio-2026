@@ -57,7 +57,7 @@ export default function Contact() {
       <p className="section-label">Lets Talk</p>
 
       <h2 className="section-title">
-        CONTACT<br />ME
+        CONNECT<br />ME
       </h2>
 
       <div className="contact-container">
