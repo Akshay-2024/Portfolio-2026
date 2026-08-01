@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <Link href="/" className="nav-logo">A S</Link>
+      <Link href="/" className="nav-logo">AKSHAY S</Link>
 
       {/* HAMBURGER */}
       <div className="nav-toggle" onClick={() => setOpen(!open)}>
