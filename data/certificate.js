@@ -6,6 +6,13 @@ export const certificates = [
     category: "Course",
     image: "/Certificates/Reconnaissance-Enumeration.jpg",
   },
+  {
+    title: "Introduction to AI-Assisted Vibe Coding ",
+    issuer: "Kerala Startup Mission",
+    year: 2026,
+    category: "Webinar",
+    image: "/Certificates/vibe coding.jpg",
+  },
    {
     title: "Figma Essentials For Modern Design",
     issuer: "Kerala Startup Mission",
