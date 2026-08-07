@@ -10,7 +10,7 @@ export default function Education() {
         <div className="edu-card edu-left">
           <div className="edu-level">Pursuing</div>
           <h3>University College of Engineering, Kariavattom</h3>
-          <p>BTech in Computer Engineering</p>
+          <p>BTech in Computer Science & Engineering</p>
         </div>
 
         <div className="edu-card">
