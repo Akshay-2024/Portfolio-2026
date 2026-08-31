@@ -13,13 +13,13 @@ export default function Collections() {
     },
     {
       title: "Photos",
-      count: "21 captures",
+      count: "26 captures",
       icon: "📷",
       href: "/photos",
     },
     {
       title: "Videos",
-      count: "10 films",
+      count: "11 films",
       icon: "🎬",
       href: "/videos",
     },
