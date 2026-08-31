@@ -114,6 +114,16 @@ export default function VideosPage() {
         ></iframe>
         </div>
         
+        <div className="video-card wide">
+          <iframe
+        src="https://www.youtube.com/embed/Y2j0ip18edI" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        
+        ></iframe>
+        </div>
       
         
       </div>
