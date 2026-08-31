@@ -19,6 +19,8 @@ export default function Education() {
           <p>Diploma in Computer Engineering</p>
         </div>
 
+        
+
         <div className="edu-card edu-left">
           <div className="edu-level">2022</div>
           <h3>Govt. HSS Thonakkal</h3>
