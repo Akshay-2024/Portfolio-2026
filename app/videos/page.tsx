@@ -1,4 +1,23 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import SecondaryLoader from "@/components/SecondaryLoader";
+
 export default function VideosPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 650);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <SecondaryLoader type="videos" />;
+  }
+
   return (
     <section className="section" id="videos">
       <p className="section-label">Showcase</p>

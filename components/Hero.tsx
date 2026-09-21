@@ -48,10 +48,11 @@ export default function Hero() {
       <div className="hero-image">
         <div className="hero-photo-frame">
           <Image
-            src="/profile2.png"
+            src="https://res.cloudinary.com/ak6fzdkq/image/upload/v1790012413/1000244228.png"
             alt="Akshay"
             width={400}
             height={500}
+            loading="eager"
             className="hero-photo"
           />
         </div>

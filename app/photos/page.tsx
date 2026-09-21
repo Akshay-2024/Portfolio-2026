@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
+import SecondaryLoader from "@/components/SecondaryLoader"
 
 const photos = [
   { src: "/photos/p26.png", alt: "photo26" },
@@ -32,6 +33,7 @@ const photos = [
 ]
 
 export default function PhotosPage() {
+  const [loading, setLoading] = useState(true)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   const close = useCallback(() => setActiveIndex(null), [])
@@ -43,6 +45,14 @@ export default function PhotosPage() {
   const showNext = useCallback(() => {
     setActiveIndex((i) => (i === null ? null : (i + 1) % photos.length))
   }, [])
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 650);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (activeIndex === null) return
@@ -61,6 +71,10 @@ export default function PhotosPage() {
       document.body.style.overflow = ""
     }
   }, [activeIndex, close, showPrev, showNext])
+
+  if (loading) {
+    return <SecondaryLoader type="photos" />;
+  }
 
   return (
     <section className="section" id="photos">

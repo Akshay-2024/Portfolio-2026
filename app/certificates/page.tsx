@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { certificates } from "@/data/certificate"; // ✅ fixed
-
-
+import SecondaryLoader from "@/components/SecondaryLoader";
 
 type Certificate = {
   title: string;
@@ -14,7 +13,7 @@ type Certificate = {
 };
 
 export default function CertificatesPage() {
-  
+  const [loading, setLoading] = useState(true);
   const [yearFilter, setYearFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [yearOpen, setYearOpen] = useState(false);
@@ -22,17 +21,48 @@ export default function CertificatesPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
- 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 
-useEffect(() => {
-  const handleClickOutside = () => {
-    setYearOpen(false);
-    setCategoryOpen(false);
-  };
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 650);
 
-  window.addEventListener("click", handleClickOutside);
-  return () => window.removeEventListener("click", handleClickOutside);
-}, []);
+    const handleClickOutside = () => {
+      setYearOpen(false);
+      setCategoryOpen(false);
+    };
+
+    window.addEventListener("click", handleClickOutside);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (e.key === "ArrowRight") {
+        showNext();
+      }
+
+      if (e.key === "ArrowLeft") {
+        showPrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+
+    return () =>
+      window.removeEventListener("keydown", handleKey);
+  }, [isOpen, selectedIndex]);
+
   const filteredCertificates = certificates.filter((cert: Certificate) => {
     return (
       (yearFilter === "all" || cert.year === Number(yearFilter)) &&
@@ -40,66 +70,42 @@ useEffect(() => {
     );
   });
 
-  // ✅ define OUTSIDE JSX
   const uniqueYears = Array.from(
-  new Set(certificates.map((c: Certificate) => c.year))
-) as number[];
+    new Set(certificates.map((c: Certificate) => c.year))
+  ) as number[];
 
   const openLightbox = (index: number) => {
-  setSelectedIndex(index);
-  setIsOpen(true);
-};
-
-const closeLightbox = () => {
-  setIsOpen(false);
-
-  setTimeout(() => {
-    setSelectedIndex(null);
-  }, 200);
-};
-
-const showNext = (e?: React.MouseEvent) => {
-  e?.stopPropagation();
-
-  if (selectedIndex === null) return;
-
-  setSelectedIndex(
-    (selectedIndex + 1) % filteredCertificates.length
-  );
-};
-
-const showPrev = (e?: React.MouseEvent) => {
-  e?.stopPropagation();
-
-  if (selectedIndex === null) return;
-
-  setSelectedIndex(
-    (selectedIndex - 1 + filteredCertificates.length) %
-      filteredCertificates.length
-  );
-};
- useEffect(() => {
-  if (!isOpen) return;
-
-  const handleKey = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      closeLightbox();
-    }
-
-    if (e.key === "ArrowRight") {
-      showNext();
-    }
-
-    if (e.key === "ArrowLeft") {
-      showPrev();
-    }
+    setSelectedIndex(index);
+    setIsOpen(true);
   };
 
-  window.addEventListener("keydown", handleKey);
+  const closeLightbox = () => {
+    setIsOpen(false);
+    setTimeout(() => {
+      setSelectedIndex(null);
+    }, 200);
+  };
 
-  return () =>
-    window.removeEventListener("keydown", handleKey);
-}, [isOpen, selectedIndex]);
+  const showNext = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (selectedIndex === null) return;
+    setSelectedIndex(
+      (selectedIndex + 1) % filteredCertificates.length
+    );
+  };
+
+  const showPrev = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (selectedIndex === null) return;
+    setSelectedIndex(
+      (selectedIndex - 1 + filteredCertificates.length) %
+        filteredCertificates.length
+    );
+  };
+
+  if (loading) {
+    return <SecondaryLoader type="certificates" />;
+  }
 
   return (
     <section className="section">

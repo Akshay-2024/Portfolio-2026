@@ -41,7 +41,12 @@ export default function Collections() {
 
       <div className="collections-grid">
         {items.map((item, i) => (
-          <Link href={item.href} key={i} className="collection-card">
+          <Link
+            href={item.href}
+            key={i}
+            className="collection-card"
+            onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "instant" })}
+          >
             <div className="card-glow"></div>
 
             <div className="collection-icon">{item.icon}</div>
