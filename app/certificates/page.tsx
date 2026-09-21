@@ -14,6 +14,7 @@ type Certificate = {
 };
 
 export default function CertificatesPage() {
+  
   const [yearFilter, setYearFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [yearOpen, setYearOpen] = useState(false);
