@@ -93,7 +93,8 @@ export default function PhotosPage() {
               if (e.key === "Enter") setActiveIndex(index)
             }}
           >
-            <img src={photo.src} alt={photo.alt} />
+            <img src={photo.src} alt={photo.alt} 
+            loading="eager" />
           </div>
         ))}
       </div>
@@ -127,6 +128,7 @@ export default function PhotosPage() {
             alt={photos[activeIndex].alt}
             className="lightbox-image"
             onClick={(e) => e.stopPropagation()}
+            loading="eager"
           />
 
           <button
